@@ -77,7 +77,7 @@ export default class ReadStoryScreen extends React.Component {
              
              // onChangeText={text => this.SearchFilterFunction(text)}
              // onChangeText={() => this.SearchFilterFunction(text)}
-             // onChangeText={({text}) => this.SearchFilterFunction(text)}
+              onChangeText={({text}) => this.SearchFilterFunction(text)}
              // onChangeText={text => this.SearchFilterFunction(text)}
 
               value={this.state.search}
@@ -87,8 +87,8 @@ export default class ReadStoryScreen extends React.Component {
           <FlatList
                 data={this.state.search === "" ?  this.state.allStories: this.state.dataSource}
                 //renderItem={({ item }) => (
-                //renderItem={( item ) => (
-                renderItem={({ item }) => {
+                renderItem={( item ) => (
+                //renderItem={({ item }) => {
                 // renderItem=>{({}){
                   <View style={styles.itemContainer}>
                     <Text>  Title: {item.title}</Text>

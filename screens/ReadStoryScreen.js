@@ -17,7 +17,7 @@ export default class ReadStoryScreen extends React.Component {
     this.retrieveStories()
   }
 
-  updateSearch = (search) => {
+  updateSearch = search => {
     this.setState({ search });
   };
 
@@ -47,7 +47,7 @@ export default class ReadStoryScreen extends React.Component {
     const newData = this.state.allStories.filter((item)=> {
       //applying filter for the inserted text in search bar
       const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
-      const textData = text.toUpperCase();
+      //const textData = text.toUpperCase();
       // const textData = text.toUppercase();
       //const textData = text.toupperCase();
      // const textData = text.upperCase();
@@ -77,7 +77,7 @@ export default class ReadStoryScreen extends React.Component {
              
              // onChangeText={text => this.SearchFilterFunction(text)}
              // onChangeText={() => this.SearchFilterFunction(text)}
-              onChangeText={({text}) => this.SearchFilterFunction(text)}
+             // onChangeText={({text}) => this.SearchFilterFunction(text)}
              // onChangeText={text => this.SearchFilterFunction(text)}
 
               value={this.state.search}
@@ -87,7 +87,7 @@ export default class ReadStoryScreen extends React.Component {
           <FlatList
                 data={this.state.search === "" ?  this.state.allStories: this.state.dataSource}
                 //renderItem={({ item }) => (
-                renderItem={( item ) => (
+                //renderItem={( item ) => (
                 //renderItem={({ item }) => {
                 // renderItem=>{({}){
                   <View style={styles.itemContainer}>
